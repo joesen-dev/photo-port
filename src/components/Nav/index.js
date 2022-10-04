@@ -5,15 +5,10 @@ function Nav(props) {
   const {
     categories = [],
     setCurrentCategory,
-    currentCategory,
     contactSelected,
+    currentCategory,
     setContactSelected,
   } = props;
-
-  const handleClick = (item) => {
-    console.log(item);
-    return item;
-  };
 
   return (
     <header className="flex-row px-1">
@@ -45,7 +40,7 @@ function Nav(props) {
               className={`mx-1 ${
                 currentCategory.name === category.name &&
                 !contactSelected &&
-                `navActive`
+                "navActive"
               }`}
               key={category.name}
             >
